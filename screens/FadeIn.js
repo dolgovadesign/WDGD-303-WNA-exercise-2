@@ -19,13 +19,13 @@ function FadeIn() {
 }, [fadeAnim, isFocused]);
 
   return (
-  <View style={{flex:1, alignItems:"center", justifyContent: "center" }}>
+  <View style={{flex:1, alignItems:"center", justifyContent: "center", backgroundColor: "forestgreen", }}>
   <Animated.View
   style={{
-    width:250,
-    height: 50,
+    width: 333,
+    height: 375,
     borderRadius:10,
-    backgroundColor:"purple",
+    backgroundColor:"darkgreen",
     opacity: fadeAnim,
     transform: [
       {
@@ -37,8 +37,14 @@ function FadeIn() {
     ],
   }}
   >
-    <Text style={{ color: "white", textAlign: "center", margin: 10, fontSize:22 }}>
-      FadeIn Animation
+    <Text style={{ color: "white", textAlign: "center", margin: 15, fontSize:22 }}>
+    “A quiet secluded life in the country, with the possibility of being useful to 
+    people to whom it is easy to do good, and who are not accustomed to have it done to them; 
+    then work which one hopes may be of some use; then rest, nature, books, music, love for 
+    one's neighbor — such is my idea of happiness.”
+    </Text>
+    <Text style={{ color: "white", textAlign: "center", margin: 15, fontSize:17 }}>
+    ― Leo Tolstoy, Family Happiness 
     </Text>
   </Animated.View>
   </View>
@@ -46,6 +52,8 @@ function FadeIn() {
 }
 
 export default FadeIn;
+
+
 
 
 

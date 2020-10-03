@@ -24,13 +24,15 @@ function Rotate() {
 }, [spinAnim, isFocused]);
 
   return (
-  <View style={{flex:1, alignItems:"center", justifyContent: "center" }}>
+  <View style={{flex:1, alignItems:"center", backgroundColor: "darkgreen", justifyContent: "center" }}>
   <Animated.View
   style={{
-    width:250,
-    height: 250,
-    borderRadius:10,
-    backgroundColor:"forestgreen",
+    width: 333,
+    height: 333,
+    backgroundColor:"darkgreen",
+    borderWidth: 2,
+    borderRadius: 23,
+    borderColor: "white",
     transform: [
       {
         rotate: spinAnim.interpolate({
@@ -41,11 +43,20 @@ function Rotate() {
     ],
   }}
   >
-    <Text style={{ color: "white", textAlign: "center", margin: 10, fontSize:22 }}>
-      Spin Animation
-      </Text>
+    <Text style={{ color: "white", textAlign: "center", margin: 15, fontSize:22 }}>
+      “Love is life. All, everything that I understand, I understand only because I love. 
+      Everything is, everything exists, only because I love. Everything is united by it alone. 
+      Love is God, and to die means that I, a particle of love, shall return to the general 
+      and eternal source.”
+    </Text>
+    <Text style={{ color: "white", textAlign: "center", margin: 15, fontSize:17 }}>
+      ― Leo Tolstoy 
+    </Text>
   </Animated.View>
-  <Button title="Start" onPress={startAnim} />
+  <Button  title="Click Me!"
+           onPress={startAnim}
+           color="lightgreen"
+           accessibilityLabel="Rotate quote" />
   </View>
   );
 }

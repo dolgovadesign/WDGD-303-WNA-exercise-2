@@ -3,7 +3,7 @@ import React from "react";
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { AntDesign, Entypo, Foundation} from "@expo/vector-icons";
+import { AntDesign, Entypo, FontAwesome, MaterialIcons, Feather } from "@expo/vector-icons";
 import { Text, 
          View, 
          Button, 
@@ -27,7 +27,7 @@ const RootTabNavigator = () => {
   return (
     <RootTab.Navigator
         tabBarOptions={{
-          activeTintColor: "purple",
+          activeTintColor: "darkgreen",
           inactiveTintColor: "gray",
      }}
       
@@ -35,9 +35,9 @@ const RootTabNavigator = () => {
       <RootTab.Screen name="FadeIn" 
                       component={FadeIn}
                       options={{
-                        title: "Fade In",
+                        title: "Quote",
                         tabBarIcon: ({ focused }) => (
-                          <Entypo name="air" size={24} color={focused ? "purple" : "gray"} />
+                          <Entypo name="open-book" size={24} color={focused ? "darkgreen" : "gray"} />
                         ),
                       }}
         />
@@ -46,7 +46,7 @@ const RootTabNavigator = () => {
                       options={{
                         title: "Slideshow",
                         tabBarIcon: ({ focused }) => (
-                          <Foundation name="play" size={24} color="black" />
+                          <FontAwesome name="camera-retro" size={24} color={focused ? "darkgreen" : "gray"} />
                         ),
                       }}
                       />
@@ -56,7 +56,7 @@ const RootTabNavigator = () => {
                       options={{
                         title: "Rotate",
                         tabBarIcon: ({ focused }) => (
-                          <AntDesign name="retweet" size={24} color="black" />
+                          <MaterialIcons name="rotate-right" size={24} color={focused ? "darkgreen" : "gray"} />
                         ),
                       }}
                       />
@@ -64,9 +64,9 @@ const RootTabNavigator = () => {
 <RootTab.Screen name="DragGesture" 
                 component={DragGesture}
                 options={{
-                title: "DragGesture",
+                title: "Play",
                   tabBarIcon: ({ focused }) => (
-                    <Entypo name="copy" size={24} color="black" />
+                    <Feather name="play-circle" size={24} color={focused ? "darkgreen" : "gray"} />
                   ),
                 }}
                 />

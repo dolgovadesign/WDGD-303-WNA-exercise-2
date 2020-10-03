@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   text: {
     color: "beige",
     fontSize: 33,
-    fontWeight: "700"
+    fontWeight: "700",
   },
 
   textTitle:{

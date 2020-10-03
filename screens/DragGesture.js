@@ -18,18 +18,18 @@ export default DragGesture = () => {
                y: position.y._value,
            });
        },
-    //onPanResponderRelease: () => {
-    //    position.flattenOffset();
-    //},
-    //});
-    onPanResponderRelease: () => {
-     Animated.spring(position, {
-      toValue: { x: 0, y: 0 },
-     }).start();    
+     //onPanResponderRelease: () => {
+     // position.flattenOffset();
+     //},
+     //});
+       onPanResponderRelease: () => {
+        Animated.spring(position, {
+        toValue: { x: 0, y: 0 },
+       }).start();    
     },
     });
 
-    useEffect(() => {
+       useEffect(() => {
         return ()=> position.setValue({ x: 0, y: 0});
    }, [isFocused]);
 
@@ -46,11 +46,12 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: "center",
         justifyContent: "center",
+        backgroundColor: "darkgreen",
     },
     ball:{
-        backgroundColor: "blue",
-        height: 100,
-        width: 100,
+        backgroundColor: "white",
+        height: 34,
+        width: 34,
         borderRadius: 50,
     },
     });

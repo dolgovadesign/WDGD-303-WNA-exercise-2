@@ -24,7 +24,6 @@ const images = {
 
 export default function Details() {
   const [count, setCount] = useState(1);
-
   const changeCount = (updatedCount) => {
     if (updatedCount < 1 || updatedCount > Object.keys(images).length) {
       return;
@@ -60,7 +59,6 @@ export default function Details() {
         <Text style={styles.text}>Life brings tears, smiles, and memories. The tears dry, the smiles fade,</Text>
         <Text style={styles.text}>but the memories last</Text>
         <Text style={[styles.text, styles.bottomText]}>FOREVER.</Text>
-
         <Image style={styles.image} source={images[count]} />
         <Text style={styles.textCount}>Gratitude {count}</Text>
      
@@ -76,6 +74,7 @@ export default function Details() {
 
 const styles = StyleSheet.create({
   container: {
+    paddingTop: 72,
     flexGrow: 1,
     backgroundColor: "forestgreen",
     // alignItems: "center",

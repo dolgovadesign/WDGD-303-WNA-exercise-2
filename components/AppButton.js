@@ -22,4 +22,4 @@ const styles = StyleSheet.create({
       borderRadius: 23,
       borderColor: "darkgreen"
     }
-  });
+});
