@@ -1,6 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import { StyleSheet,
-         Text,
+import { StyleSheet,Text,
          Animated, 
          View} from "react-native";
 import { useIsFocused } from "@react-navigation/native";
@@ -40,7 +39,7 @@ function FadeIn() {
   >
     <Text style={{ color: "white", textAlign: "center", margin: 10, fontSize:22 }}>
       FadeIn Animation
-      </Text>
+    </Text>
   </Animated.View>
   </View>
   );

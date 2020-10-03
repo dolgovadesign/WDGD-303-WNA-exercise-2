@@ -4,24 +4,24 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { AntDesign, Entypo, Foundation} from "@expo/vector-icons";
-import { StyleSheet,
-         Text, 
+import { Text, 
          View, 
          Button, 
          Alert, 
          Image, 
          Dimensions, 
-         AsyncStorage
+         AsyncStorage,
+         StyleSheet
         } from "react-native";
 
 import Home from "./screens/Home";
 import Details from "./screens/Details";
 import FadeIn from "./screens/FadeIn";
 import Rotate from "./screens/Rotate";
+import DragGesture from "./screens/DragGesture";
 
 const Drawer = createDrawerNavigator();
 const RootTab = createBottomTabNavigator();
-
 
 const RootTabNavigator = () => {
   return (
@@ -51,8 +51,6 @@ const RootTabNavigator = () => {
                       }}
                       />
 
-
-
 <RootTab.Screen name="Rotate" 
                       component={Rotate}
                       options={{
@@ -62,6 +60,16 @@ const RootTabNavigator = () => {
                         ),
                       }}
                       />
+
+<RootTab.Screen name="DragGesture" 
+                component={DragGesture}
+                options={{
+                title: "DragGesture",
+                  tabBarIcon: ({ focused }) => (
+                    <Entypo name="copy" size={24} color="black" />
+                  ),
+                }}
+                />
 
     </RootTab.Navigator>       
   );

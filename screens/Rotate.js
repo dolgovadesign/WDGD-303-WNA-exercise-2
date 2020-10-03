@@ -18,14 +18,7 @@ function Rotate() {
       useNativeDriver: true,
     }).start();
   };
-
-
-
-
-
-
   useEffect(() => {
-
   startAnim();
   return ()=> spinAnim.setValue(0)
 }, [spinAnim, isFocused]);
